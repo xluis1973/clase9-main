@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary">Componentes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-list>
+    <ion-item *ngFor="let ruta of rutas" [routerLink]="ruta.redirectTo" detail>
+      <ion-icon slot="start" [name]="ruta.icon" color="primary"></ion-icon>
+      {{ruta.name}}
+
+    </ion-item>
+  </ion-list>
+
+  <!-- <ion-list>
+    
+    <ion-item *ngFor="let ruta of rutas">
+      <ion-button [routerLink]="ruta.ruta" shape="round">
+        {{ruta.titulo}}
+      </ion-button>
+    </ion-item>
+  </ion-list> -->
+
+
+
+  <!-- <ion-button routerLink="/alert" shape="round">
+    Alert
+  </ion-button>
+  <ion-button routerLink="/action-sheet" shape="round">
+    Action Sheet
+  </ion-button> -->
+
+</ion-content>
